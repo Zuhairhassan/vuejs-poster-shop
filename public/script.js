@@ -30,5 +30,10 @@ methods:{
         }
         
     }
-}
+},
+ filters:{
+     currency:function(price){
+        return "$".concat(price.toFixed(2));
+     }
+ }
 });
