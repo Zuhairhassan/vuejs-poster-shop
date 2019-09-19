@@ -12,7 +12,23 @@ data:{
 methods:{
     addToCart:function(product){
         this.total +=product.price;
-        this.cart.push(product);
+        var found=false;
+        for(var i=0; i<this.cart.length; i++){
+        if(this.cart[i].id==product.id){
+            this.cart[i].qty++;
+            found=true;
+        }
+        }
+        if(!found){
+            this.cart.push({
+                id:product.id,
+                title:product.title,
+                price:product.price,
+                qty:1
+    
+            });
+        }
+        
     }
 }
 });
