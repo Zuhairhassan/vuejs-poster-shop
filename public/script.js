@@ -10,8 +10,8 @@ data:{
     ]
 },
 methods:{
-    addToCart:function(){
-        this.total +=9.99;
+    addToCart:function(product){
+        console.log(product.id);
     }
 }
 });
